@@ -1,0 +1,9 @@
+{
+    "python.autoComplete.extraPaths": ["server/__pypackages__/3.10/lib"],
+    "python.analysis.extraPaths": ["server/__pypackages__/3.10/lib"],
+    "python.formatting.autopep8Path": "server/__pypackages__/3.10/lib/autopep8.py",
+    "python.formatting.autopep8Args": [
+      "--max-line-length=80"
+    ]
+  }
+  

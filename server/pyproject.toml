@@ -1,0 +1,27 @@
+[project]
+name = "server"
+version = "0.0.0"
+description = ""
+authors = [
+    {name = "ByronMunozG", email = "byron.munoz.godoy@gmail.com"},
+]
+dependencies = [
+    "fastapi>=0.78.0",
+    "uvicorn>=0.17.6",
+    "pandas>=1.4.2"]
+requires-python = ">=3.10"
+license = {text = "MIT"}
+[project.optional-dependencies]
+
+[tool.pdm]
+[tool.pdm.scripts]
+start = "python app/main.py"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "autopep8>=1.6.0",
+]
+
+[build-system]
+requires = ["pdm-pep517>=0.12.0"]
+build-backend = "pdm.pep517.api"
