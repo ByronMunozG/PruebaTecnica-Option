@@ -1,0 +1,35 @@
+on: [push]
+name: Continuos Integration
+
+jobs:
+  test_client:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: client
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+      - run: npm ci
+      - run: npm test
+  test_server:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pdm-project/setup-pdm@main
+        name: Setup PDM
+        with:
+          python-version: 3.10
+          architecture: x64
+          version: 1.15.0
+          prerelease: true
+          enable-pep582: true
+      - name: Install dependencies
+        run: pdm install
+      - name: Run Tests
+        run: pdm run test

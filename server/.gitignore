@@ -1,3 +1,4 @@
 .pdm.toml
+.pytest_cache
 __pypackages__/
 __pycache__

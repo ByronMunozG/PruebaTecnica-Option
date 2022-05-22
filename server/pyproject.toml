@@ -16,10 +16,13 @@ license = {text = "MIT"}
 [tool.pdm]
 [tool.pdm.scripts]
 start = "python app/main.py"
+test = "python -m pytest app/"
 
 [tool.pdm.dev-dependencies]
 dev = [
     "autopep8>=1.6.0",
+    "pytest>=7.1.2",
+    "requests>=2.27.1",
 ]
 
 [build-system]

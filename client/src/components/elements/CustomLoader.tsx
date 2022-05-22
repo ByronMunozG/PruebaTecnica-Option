@@ -2,7 +2,7 @@ import { Center, Loader } from '@mantine/core';
 
 const CustomLoader = () => (
   <Center mt="xl">
-    <Loader />
+    <Loader data-testid="custom-loader" />
   </Center>
 );
 
